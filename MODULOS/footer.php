@@ -7,6 +7,6 @@
         </div>
     </div>
     
-    <script src="./JS/index.js"></script>
+    <script src="../JS/index.js"></script>
 </body>
 </html>
