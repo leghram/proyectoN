@@ -55,7 +55,33 @@ class Area{
         // </div>
     }
 
-    function ObtenerAreaRegistros($todosLosRegistros){
+    function ObtenerAreaRegistros($matrizRegistros){
+        $this->areaRegistros= "";
+
+        for($a =0 ; $a < count($matrizRegistros); $a++){
+            $this->areaRegistros = $this->areaRegistros . "<div class='registro'><div class='datosRegistro'>" ;
+            for($b =0 ; $b < count($matrizRegistros[$a]) ; $b++){
+                $this->areaRegistros = $this->areaRegistros . "<p>".$matrizRegistros[$a][$b]."</p>";
+            }
+            $this->areaRegistros = $this->areaRegistros . "</div><div class='botonesRegistro'><button>EDITAR</button><div>ELIMINAR</div></div></div>";
+        }
+
+
+        // <div class="registro">
+        //     <div class="datosRegistro">
+        //         <p>regitros 1</p>
+        //         <p>regitros 1</p>
+        //         <p>regitros 1</p>
+        //         <p>regitros 1</p>
+        //         <p>regitros 1</p>
+        //     </div>
+        //     <div class="botonesRegistro">
+        //         <button>EDITAR</button>
+        //         <div>ELIMINAR</div>
+        //     </div>
+        // </div>
+
+        return $this->areaRegistros;
 
     }
 

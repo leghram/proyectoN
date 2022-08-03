@@ -94,14 +94,14 @@ class Categoria{
 
 
 
-$ejemplo = new Cliente();
+// $ejemplo = new Cliente();
 
 
 
 
 
 
-echo "HOLA";
+// echo "HOLA";
 
 
 
