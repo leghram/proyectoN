@@ -12,7 +12,7 @@ class Categoria{
     public $cantidadCampos;
     public $coneccion;
 
-    function Cliente(){
+    function Categoria(){
         $BD = new BaseDatos();
         $this->coneccion = $BD->coneccion;
         $this->EstablecerCantidadCampos();
