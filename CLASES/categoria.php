@@ -4,7 +4,7 @@ include("../CONFIG/BaseDatos.php");
 
 class Categoria{
     
-    private $nombreTabla = "CATEGORIAS";
+    private $nombreTabla;
     private $listaCampos = array();
     private $listaDatos = array();
     private $listaRegistros = array();
@@ -13,6 +13,7 @@ class Categoria{
     public $coneccion;
 
     function Categoria(){
+        $this->nombreTabla="CATEGORIAS";
         $BD = new BaseDatos();
         $this->coneccion = $BD->coneccion;
         $this->EstablecerCantidadCampos();

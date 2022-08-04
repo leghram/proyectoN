@@ -2,7 +2,7 @@
 include("../CONFIG/BaseDatos.php");
 
 
-class Usuario{
+class General{
     
     private $nombreTabla;
     private $listaCampos = array();
@@ -12,11 +12,12 @@ class Usuario{
     public $cantidadCampos;
     public $coneccion;
 
-    function Usuario(){
-        $this->nombreTabla = "USUARIOS";
+    function General($nombre){
+        $this->nombreTabla = $nombre;
         $BD = new BaseDatos();
         $this->coneccion = $BD->coneccion;
         $this->EstablecerCantidadCampos();
+
     }
 
     function GenerarNombresCampos(){
@@ -85,6 +86,18 @@ class Usuario{
         }else{
             return 0;
         }
+    }
+
+    function EliminaSeguro($consulta){
+        if(mysqli_query($this->coneccion,$consulta)){
+            return 1;
+        }else{
+            return 0;
+        }
+    }
+
+    function ConseguirData(){
+        return $this->nombreTabla;
     }
 
 

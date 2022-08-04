@@ -4,7 +4,7 @@ include("../CONFIG/BaseDatos.php");
 
 class Proveedor{
     
-    private $nombreTabla = "PROVEEDORES";
+    private $nombreTabla;
     private $listaCampos = array();
     private $listaDatos = array();
     private $listaRegistros = array();
@@ -13,6 +13,7 @@ class Proveedor{
     public $coneccion;
 
     function Proveedor(){
+        $this->nombreTabla = "PROVEEDORES";
         $BD = new BaseDatos();
         $this->coneccion = $BD->coneccion;
         $this->EstablecerCantidadCampos();
@@ -85,6 +86,18 @@ class Proveedor{
         }else{
             return 0;
         }
+    }
+
+    function EliminaSeguro($consulta){
+        if(mysqli_query($this->coneccion,$consulta)){
+            return 1;
+        }else{
+            return 0;
+        }
+    }
+
+    function ObtenerData(){
+        return $this->nombreTabla;
     }
 
 

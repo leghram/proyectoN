@@ -4,7 +4,7 @@ include("../CONFIG/BaseDatos.php");
 
 class Cliente{
     
-    private $nombreTabla = "CLIENTES";
+    private $nombreTabla;
     private $listaCampos = array();
     private $listaDatos = array();
     private $listaRegistros = array();
@@ -13,6 +13,7 @@ class Cliente{
     public $coneccion;
 
     function Cliente(){
+        $this->nombreTabla="CLIENTES";
         $BD = new BaseDatos();
         $this->coneccion = $BD->coneccion;
         $this->EstablecerCantidadCampos();

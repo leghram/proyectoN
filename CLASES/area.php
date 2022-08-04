@@ -5,7 +5,7 @@ class Area{
     private $areaFiltro="";
     private $areaTitulos="";
     private $areaRegistros="";
-
+    private $areaFormulario="";
 
     function Area(){
 
@@ -59,11 +59,15 @@ class Area{
         $this->areaRegistros= "";
 
         for($a =0 ; $a < count($matrizRegistros); $a++){
+            $idRegistro="";
             $this->areaRegistros = $this->areaRegistros . "<div class='registro'><div class='datosRegistro ladoA'>" ;
             for($b =0 ; $b < count($matrizRegistros[$a]) ; $b++){
+                if($b==0){
+                    $idRegistro = "".$matrizRegistros[$a][$b];
+                }
                 $this->areaRegistros = $this->areaRegistros . "<p>".$matrizRegistros[$a][$b]."</p>";
             }
-            $this->areaRegistros = $this->areaRegistros . "</div><div class='botonesRegistro ladoB'><a class='acciones' href='../'>EDITAR</a><a class='acciones' href='../'>ELIMINAR</a></div></div>";
+            $this->areaRegistros = $this->areaRegistros . "</div><div class='botonesRegistro ladoB'><a class='acciones' href='../PAGINAS/actualizar.php?ID=".$idRegistro."''>EDITAR</a><a class='acciones' href='../INCLUDES/eliminar.php?ID=".$idRegistro."'>ELIMINAR</a></div></div>";
         }
 
 
@@ -83,6 +87,10 @@ class Area{
 
         return $this->areaRegistros;
 
+    }
+
+    function ObtenerFormulario(){
+        
     }
 
 
