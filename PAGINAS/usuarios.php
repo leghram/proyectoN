@@ -1,10 +1,20 @@
 <?php
 include("../MODULOS/menu.php");
+include("../CLASES/usuario.php");
+include("../CLASES/area.php");
 
 $nombrePagina = "USUARIOS";
 
+$objCategoria = new Usuario();
 
+$datosTitulos = $objCategoria->ObtenerNombresCampos();
+$datosRegistros = $objCategoria->ObtenerTodosLosRegistros();
 
+$objArea = new Area();
+
+$zonaFiltros = $objArea->ObtenerAreaFiltro($datosTitulos);
+$zonaTitulos = $objArea->ObtenerAreaTitulos($datosTitulos);
+$zonaRegistros = $objArea->ObtenerAreaRegistros($datosRegistros);
 
 
 include("../MODULOS/header.php");
@@ -27,12 +37,27 @@ include("../MODULOS/header.php");
 
 
     <div class="principal">
+        <div class="areaFiltro">
+            <form class="areaFiltrar">
+                <?php echo $zonaFiltros  ?>
 
+            </form>
+        </div>
+        <div class="areaTitulos">
+            <?php  echo $zonaTitulos  ?>
+        </div>
+        <div class="areaRegistros">
+            <?php  echo $zonaRegistros  ?>
+        </div>
     </div>
+
+
+
 </div>
 <?php
     include("../MODULOS/footer.php");
 ?>
+
 
 
 

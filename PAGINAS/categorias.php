@@ -39,8 +39,8 @@ include("../MODULOS/header.php");
 
     <div class="principal">
         <div class="areaFiltro">
-            <form>
-                    <?php  echo $zonaFiltros  ?>
+            <form class="areaFiltrar">
+                <?php echo $zonaFiltros  ?>
 
             </form>
         </div>

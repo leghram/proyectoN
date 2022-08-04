@@ -6,7 +6,7 @@ $listaEnlaces = array(
     "<a class='enlace' href='../PAGINAS/productos.php'>",
     "<a class='enlace' href='../PAGINAS/categorias.php'>",
     "<a class='enlace' href='../PAGINAS/proveedores.php'>",
-    "<a class='enlace' href='../CLASES/clientes.php'>"
+    "<a class='enlace' href='../'>"
 );
 
 $listaMenus = array("CLIENTES","USUARIOS","PRODUCTOS","CATEGORIAS","PROVEEDORES","SALIR");

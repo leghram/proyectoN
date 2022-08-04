@@ -1,0 +1,98 @@
+.principal{
+    width: 100%;
+    background-color: rgb(56, 48, 76);
+    height: 100%;
+}
+
+
+
+.btn{
+    width: 50%;
+}
+    
+
+/* AREA FILSTROS */
+
+.areaFiltrar{
+    margin: 40px 0;
+    height: 70px;
+    padding: 0 10px;
+    padding-top: 10px;
+    
+    background-color: rgb(32, 26, 48);
+    display: flex;
+}
+
+
+/* AREA TITULSO */
+.areaTitulos{
+    background-color: rgb(32, 26, 48);
+    display: flex;
+    justify-content: space-between;
+}
+.ladoB{
+    width: 12%;
+    background-color: rgb(32, 26, 48);
+}
+.ladoA{
+    width: 88%;
+}
+
+
+
+/* AREA REGISTROS */
+
+
+
+.registro{
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: solid 3px rgb(32, 26, 48);
+}
+
+.entradasFiltrar, .nombresTitulos, .datosRegistro{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(auto,14%));
+    text-align: center;
+    height: 60px;
+    padding-top: 10px;
+}
+
+.datosRegistro{
+    padding-top: 30px;
+}
+
+.acciones{
+    margin-left: 35px;
+    height: 30px;
+    width: 120px;
+
+    display: block;
+    font-size: 15px;
+}
+
+
+
+
+
+.inferior{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100vw;
+    height: 100px;
+    position: fixed;
+    bottom: 0;
+
+}
+
+
+
+.pie{
+    background-color: rgb(32, 26, 48);
+    text-align: center; 
+    padding: 20px;
+}
+
