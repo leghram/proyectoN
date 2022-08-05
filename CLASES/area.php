@@ -67,7 +67,7 @@ class Area{
                 }
                 $this->areaRegistros = $this->areaRegistros . "<p>".$matrizRegistros[$a][$b]."</p>";
             }
-            $this->areaRegistros = $this->areaRegistros . "</div><div class='botonesRegistro ladoB'><a class='acciones' href='../PAGINAS/actualizar.php?ID=".$idRegistro."''>EDITAR</a><a class='acciones' href='../INCLUDES/eliminar.php?ID=".$idRegistro."'>ELIMINAR</a></div></div>";
+            $this->areaRegistros = $this->areaRegistros . "</div><div class='botonesRegistro ladoB'><a class='acciones' href='../PAGINAS/actualizar.php?ID=".$idRegistro."''>EDITAR</a><a class='acciones accionEliminar' href='../INCLUDES/eliminar.php?ID=".$idRegistro."'>ELIMINAR</a></div></div>";
         }
 
 
