@@ -1,0 +1,31 @@
+.login{
+    display: flex;
+    flex-direction: row-reverse;
+    margin: auto;
+    margin-top: 200px;
+    width: 50%;
+    border: solid 3px rgb(32, 26, 48);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-radius: 20px;
+}
+
+.log{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.inlog{
+    border: none;
+    width:90%;
+    margin: 30px auto;
+    height: 40px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.btnLimpiar{
+    background-color: orange;
+    padding-top: 10px;
+}
