@@ -11,27 +11,27 @@ class Area{
 
     }
 
-    function ObtenerAreaFiltro($listaNombreCampos){
-        $this->areaFiltro = "<div class='entradasFiltrar ladoA'>";
-        for($a =0 ; $a < count($listaNombreCampos); $a++){
-            $this->areaFiltro = $this->areaFiltro . "<input type='text' name='".$listaNombreCampos[$a]."'>";
-        }
+    // function ObtenerAreaFiltro($listaNombreCampos){
+    //     $this->areaFiltro = "<div class='entradasFiltrar ladoA'>";
+    //     for($a =0 ; $a < count($listaNombreCampos); $a++){
+    //         $this->areaFiltro = $this->areaFiltro . "<input type='text' name='".$listaNombreCampos[$a]."'>";
+    //     }
 
-        $this->areaFiltro = $this->areaFiltro . "</div><div class='btnFiltrar ladoB'><button>FILTRAR</button></div>";
+    //     $this->areaFiltro = $this->areaFiltro . "</div><div class='btnFiltrar ladoB'><button>FILTRAR</button></div>";
 
-        return $this->areaFiltro;
+    //     return $this->areaFiltro;
 
-        // <div class="entradasFiltrar ladoA">
-        //     <input type="text" name="ID">
-        //     <input type="text">
-        //     <input type="text">
-        //     <input type="text">
-        //     <input type="text">
-        // </div>
-        // <div class="btnFiltrar ladoB">
-        //     <button>FILTRAR</button>
-        // </div>
-    }
+    //     // <div class="entradasFiltrar ladoA">
+    //     //     <input type="text" name="ID">
+    //     //     <input type="text">
+    //     //     <input type="text">
+    //     //     <input type="text">
+    //     //     <input type="text">
+    //     // </div>
+    //     // <div class="btnFiltrar ladoB">
+    //     //     <button>FILTRAR</button>
+    //     // </div>
+    // }
 
     function ObtenerAreaTitulos($listaNombreCampos){
         $this->areaTitulos= "<div class='nombresTitulos ladoA'>";
@@ -89,11 +89,40 @@ class Area{
 
     }
 
-    function ObtenerFormulario(){
-        
+    function ObtenerFormulario($listaNombreCampos, $listaDatos){
+        $labels = "<div class='labelsFormulario'>";
+        $inputs = "<div class='inputsFormulario'>";
+        for($a = 0 ; $a < count($listaNombreCampos); $a++){
+            $labels = $labels . "<label>".$listaNombreCampos[$a]."</label>";
+            $inputs = $inputs . "<input class='actualizando' type='text' name='".$listaNombreCampos[$a]."' value = '".$listaDatos[$a]."'>";
+        }
+        $labels = $labels . "</div>";
+        $inputs = $inputs . "</div>";
+
+        return $labels . $inputs;
     }
 
+    // <div class="labelsFormulario">
+    //     <label>TEXTO</label>
+    // </div>
+    // <div class="datosFormulario">
+    //     <input type="text" value ="VALOR" class="actualizando">
+    // </div>
 
+
+    
+    function ObtenerFormularioAgregar($listaNombreCampos){
+        $labels = "<div class='labelsFormulario'>";
+        $inputs = "<div class='inputsFormulario'>";
+        for($a = 0 ; $a < count($listaNombreCampos); $a++){
+            $labels = $labels . "<label>".$listaNombreCampos[$a]."</label>";
+            $inputs = $inputs . "<input class='actualizando' type='text' name='".$listaNombreCampos[$a]."'>";
+        }
+        $labels = $labels . "</div>";
+        $inputs = $inputs . "</div>";
+
+        return $labels . $inputs;
+    }
 
 
 

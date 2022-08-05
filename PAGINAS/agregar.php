@@ -4,7 +4,7 @@ include("../CLASES/area.php");
 
 include("../CLASES/ado.php");
 
-$idActualizar = $_GET["ID"];
+// $idAgregar = $_GET["ID"];
 $objGenerador = new Ado($_SERVER["HTTP_REFERER"]);
 $objEntidad = $objGenerador->ObtenerObjeto();
 
@@ -12,7 +12,7 @@ $nombrePagina = $objGenerador->ObtenerNombreTabla();
 // $nombrePagina = "CATEGORIAS";
 
 $titulosRegistroActualizar = $objEntidad->ObtenerNombresCampos();
-$datosRegistrosActualizar= $objEntidad->ObtenerRegistroSegunID($idActualizar);
+// $datosRegistrosActualizar= $objEntidad->ObtenerRegistroSegunID($idAgregar);
 
 
 
@@ -41,12 +41,12 @@ include("../MODULOS/header.php");
 
     <div class="principal">
         <div class="paginaFormulario">
-            <h2>ACTUALIZANDO <?php echo $nombrePagina ?></h2>
+            <h2>AGREGANDO <?php echo $nombrePagina ?></h2>
             <form action="../INCLUDES/proces<?php echo strtolower($nombrePagina)?>.php" method ="POST" class="zonaFormulario">
                 <div class="zonaData">
 
                     <?php
-                        echo $objArea->ObtenerFormulario($titulosRegistroActualizar, $datosRegistrosActualizar);
+                        echo $objArea->ObtenerFormularioAgregar($titulosRegistroActualizar);
                     ?>
 
                     <!-- <div class="labelsFormulario">

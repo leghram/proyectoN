@@ -18,21 +18,21 @@ if($objGenerador->EliminarConAdo($idEliminar)){
 }else{
     echo $_SERVER["HTTP_REFERER"];
     echo "<br>";
-    echo "<br>";
-    echo $objEntidad->ObtenerNombresCampos()[2];
-    echo "<br>";
-    echo "<br>";
+    // echo "<br>";
+    // echo $objEntidad->ObtenerNombresCampos()[2];
+    // echo "<br>";
+    // echo "<br>";
 
-    echo $objEntidad->EliminarRegistro($objEntidad->ObtenerRegistroSegunID($idEliminar)[0]);
-    echo "<br>";
-    echo $objEntidad->ConseguirData();
-    echo "<br>";
-    echo $idEliminar;
-    echo "<br>";
-    echo "no se pudo eliminar";
-    echo "<br>";
-    echo $consulta;
-    echo $nombreTabla;
+    // echo $objEntidad->EliminarRegistro($objEntidad->ObtenerRegistroSegunID($idEliminar)[0]);
+    // echo "<br>";
+    // echo $objEntidad->ConseguirData();
+    // echo "<br>";
+    // echo $idEliminar;
+    // echo "<br>";
+    // echo "no se pudo eliminar";
+    // echo "<br>";
+    // echo $consulta;
+    // echo $nombreTabla;
     
     header("Location: ../PAGINAS/".strtolower($nombreTabla).".php");
 }

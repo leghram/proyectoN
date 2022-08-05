@@ -5,44 +5,60 @@ include("../CLASES/general.php");
 // include("../CLASES/proveedor.php");
 // include("../CLASES/usuario.php");
 
-
 class Ado{
 
-private $fuente;
-private $nombreTabla;
-private $objeto;
+   private $fuente;
+   private $nombreTabla;
+   private $objeto;
 
- function Ado($url){
-    $this->fuente = $url;
-    $this->DefinirNombreTabla($url);
-    $this->CrearObjeto();
- }
+   function Ado($url){
+      $this->fuente = $url;
+      $this->DefinirNombreTabla($url);
+      $this->CrearObjeto();
+   }
 
- function DefinirNombreTabla($url){
-    if(strpos($url,"usuarios")){
-        $this->nombreTabla= "USUARIOS";
-    }else if(strpos($url,"categorias")){
-        $this->nombreTabla= "CATEGORIAS";
-    }else if(strpos($url,"clientes")){
-        $this->nombreTabla= "CLIENTES";
-    }else if(strpos($url,"productos")){
-        $this->nombreTabla= "PRODUCTOS";
-    }else if(strpos($url,"proveedores")){
-        $this->nombreTabla= "PROVEEDORES";
-    }
- }
+   function DefinirNombreTabla($url){
+      if(strpos($url,"usuarios")){
+         $this->nombreTabla= "USUARIOS";
+      }else if(strpos($url,"categorias")){
+         $this->nombreTabla= "CATEGORIAS";
+      }else if(strpos($url,"clientes")){
+         $this->nombreTabla= "CLIENTES";
+      }else if(strpos($url,"productos")){
+         $this->nombreTabla= "PRODUCTOS";
+      }else if(strpos($url,"proveedores")){
+         $this->nombreTabla= "PROVEEDORES";
+      }
+   }
 
- function CrearObjeto(){
-    $this->objeto= new General($this->nombreTabla);
- }
-
-
- function EliminarConAdo($id){
-    $resultado = $this->objeto->EliminarRegistro($id);
-    return $resultado;
- }
+   function CrearObjeto(){
+      $this->objeto= new General($this->nombreTabla);
+   }
 
 
+   function EliminarConAdo($id){
+      $resultado = $this->objeto->EliminarRegistro($id);
+      return $resultado;
+   }
+
+
+   function ObtenerNombreTabla(){
+      return $this->nombreTabla;
+   }
+
+
+   function ObtenerObjeto(){
+      return $this->objeto;
+   }
+
+   
+
+
+}
+
+
+
+?>
 
 
 
@@ -51,16 +67,8 @@ private $objeto;
 
 
 
- function ObtenerNombreTabla(){
-    return $this->nombreTabla;
- }
 
-
- function ObtenerObjeto(){
-    return $this->objeto;
- }
-
-
+<!-- 
 //  function GenerarDataObjeto(){
 //     if(strpos($this->fuente,"usuarios")){
 //         include("../CLASES/usuario.php");
@@ -84,16 +92,4 @@ private $objeto;
 //         $this->nombreTabla= "PROVEEDORES";
 //     }
 //  }
-
-
-
-}
-
-
-
-
-
-
-
-
-?>
+ -->

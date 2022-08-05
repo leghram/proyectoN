@@ -70,3 +70,8 @@ h2{
     padding-top: 10px;
     text-align: center;
 }
+
+.btnModificacion{
+    width:100%;
+    margin:10px auto;
+}

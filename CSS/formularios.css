@@ -1,0 +1,40 @@
+/* .paginaFormulario{
+    border:solid red 3px;
+} */
+
+.zonaFormulario{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 50%;
+    margin: auto;
+}
+
+.zonaData, .labelsFormulario, .inputsFormulario{
+    display: flex;
+    /* border: solid yellow 3px; */
+}
+
+.labelsFormulario, .inputsFormulario{
+    width: 50%;
+    padding: 0;
+    flex-direction: column;
+}
+
+
+
+label{
+    color:  white;
+    height: 40px;
+    margin:  10px;
+    /* border: purple solid 3px; */
+    padding-top: 10px;
+    padding-left: 20%;
+}
+
+.actualizando{
+    margin: 13px;
+}
+
+
+

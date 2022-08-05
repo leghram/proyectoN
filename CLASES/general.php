@@ -88,7 +88,20 @@ class General{
         }
     }
 
-    function EliminaSeguro($consulta){
+    // function EliminaSeguro($consulta){
+    //     if(mysqli_query($this->coneccion,$consulta)){
+    //         return 1;
+    //     }else{
+    //         return 0;
+    //     }
+    // }
+
+    // function ConseguirData(){
+    //     return $this->nombreTabla;
+    // }
+
+
+    function ActualizarRegistro($consulta){
         if(mysqli_query($this->coneccion,$consulta)){
             return 1;
         }else{
@@ -96,8 +109,12 @@ class General{
         }
     }
 
-    function ConseguirData(){
-        return $this->nombreTabla;
+    function AgregarRegistro($consulta){
+        if(mysqli_query($this->coneccion,$consulta)){
+            return 1;
+        }else{
+            return 0;
+        }
     }
 
 
